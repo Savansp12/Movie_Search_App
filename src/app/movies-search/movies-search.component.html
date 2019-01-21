@@ -1,0 +1,41 @@
+
+<div class="jumbotron">
+  
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="searchInput" placeholder="Search for movies..." [(ngModel)]="searchStr" name="searchStr" (keyup.enter)="searchMovies(ref.value)" #ref>
+        <span class="input-group-btn">
+          <button class="searchbtn" type="button" (click)="searchMovies(ref.value)">Search</button>
+        </span>
+      </div>
+      <!-- /input-group -->
+    </div>
+  </form>
+</div>
+
+<div class='result'>
+  <div *ngIf="searchRes">
+  <h3 class="orange-text">Search Results</h3>
+  <div class="row is-flex">
+    <div class="col-3" *ngFor="let movie of searchRes; let i = index;">
+      <movie-card [movie]="movie"></movie-card>
+    </div>
+  </div>
+</div>
+
+<h3 class="orange-text">Top Rated Movies</h3>
+<div class="row is-flex">
+  <div class="col-3" *ngFor="let movie of topRatedList; let i = index;">
+    <movie-card [movie]="movie"></movie-card>
+  </div>
+</div>
+
+<h3 class="orange-text">Popular Movies</h3>
+<div class="row is-flex">
+  <div class="col-3" *ngFor="let movie of popularList; let i = index;">
+    <movie-card [movie]="movie"></movie-card>
+  </div>
+</div>
+</div>
+

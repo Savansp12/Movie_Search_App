@@ -1,0 +1,93 @@
+.cardView{
+    background-color: #e0dfdf;
+    border-radius: 4px;
+    padding: 0.5px;
+    margin-bottom: 7px;
+    padding-left: 6px;
+    padding-top: 11px;
+    outline: none;
+}
+
+.poster{
+    float: left;
+    width: 93px;
+    padding-right: 6px;
+}
+
+
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+
+.col-2 {
+    width:16.66%;
+}
+
+.col-4 {
+    width:33.33%;
+}
+.col-6 {
+    width:50%;
+}
+.col-8 {
+    width:66.66%;
+}
+.col-12 {
+    width:100%;
+}
+.col-3 {
+    width:24.99%;
+}
+.col-5 {
+    width:41.66%;
+}
+
+
+.leftAlign{
+    float: left;
+    max-width: 367px;
+}
+.rightAlign{
+    float: right;
+}
+.noPadding{
+    padding: 0px;
+}
+
+.movieList{
+    padding: 4px;
+    margin-top: 103px;
+}
+
+.Mcard {
+    background-color: #9ECAFF;
+    height: 30px;
+    width: 110px;
+    border-radius: 20px;
+  }
+  
+  .Mcard > img {
+    padding-top: 5px;
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+  .wrapContent{
+    height: 27px;
+    overflow: hidden;
+    display: -webkit-box;
+  }
+  .author{
+    outline: none;
+    }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .movieList{
+        display: none;
+    }
+  }

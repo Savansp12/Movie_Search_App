@@ -1,0 +1,42 @@
+
+  <div class="row">
+   
+    <div class="col-4 leftAlign">
+      <nav class="navbar navbar-default" role="navigation">
+       
+        <div class="movieList">
+          <div class="panel-heading">Top rated movie list</div>
+          <ul class='noPadding'>
+            <li *ngFor="let movie of movieList" class='cardView' >             
+                <div class="thumbnail" routerLink="/movie/{{movie.id}}">
+                    
+                      <div class="author">
+                          <img src="https://image.tmdb.org/t/p/w300/{{movie.backdrop_path}}" class='poster' *ngIf="movie.poster_path">        
+                                            
+                              {{movie.title}}<br>
+                         
+                            <strong>Release Date: </strong>{{movie.release_date}} <br>
+                            <strong>Rated: </strong>{{movie.vote_average}}<br>
+                            <p>
+                                <small class="wrapContent" *ngIf="movie.vote_average">
+                                    {{movie.overview}}
+                                 
+                                </small>
+                              </p>
+                      </div>
+                  </div>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--/end left column-->
+    <!--/.sidebar-offcanvas-->
+    <div >
+      <router-outlet></router-outlet>
+    </div>
+    <!--/.col-xs-12.col-sm-9-->
+  </div>
+  <!--/row-->
+  
